@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var routes= require('./routes');
 
-process.env.PORT=8000;
+
 /**
  * Starting Server 
  */
@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
     res.end();
   });
   
-}).listen(process.env.PORT);
+}).listen(process.env.PORT || 8000);
 
 
-console.log('Application started on '+process.env.PORT);
+console.log('Application started on '+(process.env.PORT || 8000));
